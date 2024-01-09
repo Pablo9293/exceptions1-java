@@ -12,14 +12,14 @@ private Date dataDeEntrada;
 private Date dataDeSaida;
 private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 //Criando construtor com argumentos
-public Reserva(Integer numeroDoQuarto, Date datadeEntrada, Date dataDeSaida) {
+public Reserva(Integer numeroDoQuarto, Date dataDeEntrada, Date dataDeSaida) {
 	if (!dataDeSaida.after(dataDeEntrada)) {
 		throw new DomainExceptions("Erro na reserva:data de saida tem que ser depois da data de entrada!!!");
 	}
 	
 	
 	this.numeroDoQuarto = numeroDoQuarto;
-	this.dataDeEntrada = datadeEntrada;
+	this.dataDeEntrada = dataDeEntrada;
 	this.dataDeSaida = dataDeSaida;
 }
 public Integer getNumeroDoQuarto() {
